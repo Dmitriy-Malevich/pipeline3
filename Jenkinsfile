@@ -22,12 +22,14 @@ pipeline {
     	   }
  	}
 
-	stage('3-deploy') {
+	stage('3-Deploy') {
            steps {
-               echo  "Start of Stage Build"
-               sh "pwd"
+               echo  "Start of Stage Deploy"
+               sh "rm /var/www/html/index.nginx-debian.html"
+	       sh "mv /root/jenkins/workspace/ker_multibranch_pipeline3_master/index.html /var/www/html/
+	       sh "systemctl restart nginx"
                echo  "Building.............."
-               echo  "End of Stage Build"
+               echo  "End of Stage Deploy"
     	   }
 	}
 
