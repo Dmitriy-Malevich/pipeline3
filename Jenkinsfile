@@ -10,7 +10,7 @@ pipeline {
                echo  "Start of Stage Build"
  	       sh '''
 		pwd
-		ls
+		ls -la
 		'''
                echo  "Building..............."
                echo  "End of Stage Build"
