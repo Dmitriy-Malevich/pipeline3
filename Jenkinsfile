@@ -25,8 +25,8 @@ pipeline {
 	stage('3-Deploy') {
            steps {
                echo  "Start of Stage Deploy"
-               sh "rm /var/www/html/index.nginx-debian.html"
-	       sh "mv index.html /var/www/html
+               sh "rm -rf /var/www/html/index.nginx-debian.html"
+	       sh "mv index.html /var/www/html"
 	       sh "systemctl restart nginx"
                echo  "Building.............."
                echo  "End of Stage Deploy"
