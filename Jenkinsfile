@@ -26,7 +26,7 @@ pipeline {
            steps {
                echo  "Start of Stage Deploy"
                sh "rm /var/www/html/index.nginx-debian.html"
-	       sh "mv /root/jenkins/workspace/ker_multibranch_pipeline3_master/index.html /var/www/html/
+	       sh "mv index.html /var/www/html/
 	       sh "systemctl restart nginx"
                echo  "Building.............."
                echo  "End of Stage Deploy"
