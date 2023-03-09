@@ -9,7 +9,7 @@ pipeline {
            steps {
                echo  "Start of Stage Build"
  	       sh "pwd"
-               echo  "Building.............."
+               echo  "Building..............."
                echo  "End of Stage Build"
     }
 }
