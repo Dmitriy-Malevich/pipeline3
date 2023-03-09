@@ -1,6 +1,8 @@
 properties([pipelineTriggers([githubPush()])])
 pipeline {
-    agent any
+    agent {
+	label 'ubuntu_slave'
+}
 
     stages {
         stage('1-Build') {
