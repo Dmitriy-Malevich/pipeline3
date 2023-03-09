@@ -15,21 +15,20 @@ pipeline {
 	}
 	stage('2-Test') {
            steps {
-               echo  "Start of Stage Test"
-               sh "cat index.html | grep Вторая"
-               sh  "hostname | grep Jenkins-Slave"
-               echo  "End of Stage Build"
+               when {
+                branch "master"
+           }
+
     	   }
  	}
 
 	stage('3-Deploy') {
            steps {
                echo  "Start of Stage Deploy"
-               sh "rm -rf /var/www/html/index.nginx-debian.html"
-	       sh "mv index.html /var/www/html"
-	       sh "systemctl restart nginx"
-               echo  "Building.............."
-               echo  "End of Stage Deploy"
+               sh '''
+                hostname
+                '''
+
     	   }
 	}
 
