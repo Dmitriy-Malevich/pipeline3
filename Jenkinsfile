@@ -22,7 +22,7 @@ pipeline {
     	   }
  	}
 
-	stage('1-Build') {
+	stage('3-deploy') {
            steps {
                echo  "Start of Stage Build"
                sh "pwd"
