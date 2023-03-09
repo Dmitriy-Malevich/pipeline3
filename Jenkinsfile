@@ -17,7 +17,7 @@ pipeline {
            steps {
                echo  "Start of Stage Test"
                sh "cat index.html | grep Вторая"
-               sh  "hostname | grep 4Jenkins-Slave"
+               sh  "hostname | grep Jenkins-Slave"
                echo  "End of Stage Build"
     	   }
  	}
