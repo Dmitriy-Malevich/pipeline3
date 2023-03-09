@@ -8,7 +8,10 @@ pipeline {
         stage('1-Build') {
            steps {
                echo  "Start of Stage Build"
- 	       sh "pwd"
+ 	       sh '''
+		pwd
+		ls
+		'''
                echo  "Building..............."
                echo  "End of Stage Build"
    	   }
