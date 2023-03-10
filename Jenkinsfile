@@ -3,6 +3,10 @@ pipeline {
     agent {
 	label 'ubuntu_slave'
 }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
+        timestamps()
+          }
 
     stages {
         stage('1-Build') {
