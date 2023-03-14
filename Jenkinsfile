@@ -2,7 +2,7 @@ def sendTelegram(message) {
     def encodedMessage = URLEncoder.encode(message, "UTF-8")
     withCredentials([string(credentialsId: 'telegramToken', variable: 'TOKEN'),
     string(credentialsId: 'telegramChatId', variable: 'CHAT_ID')]) {
-
+    telegramSend(message: 'Hello World')
         response = httpRequest (consoleLogResponseBody: true,
                 contentType: 'APPLICATION_JSON',
                 httpMode: 'GET',
@@ -11,7 +11,6 @@ def sendTelegram(message) {
         return response
     }
 }
-telegramSend(message: 'Hello World')
 properties([pipelineTriggers([githubPush()])])
 pipeline {
     agent {
