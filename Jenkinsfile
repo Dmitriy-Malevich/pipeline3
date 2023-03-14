@@ -11,7 +11,7 @@ def sendTelegram(message) {
         return response
     }
 }
-telegramSend(message: 'Hello World', chatId: -911522156)
+telegramSend(message: 'Hello World')
 properties([pipelineTriggers([githubPush()])])
 pipeline {
     agent {
