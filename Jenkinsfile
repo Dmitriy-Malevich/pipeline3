@@ -27,6 +27,7 @@ pipeline {
                echo  "Start of Stage Build"
  	       sh '''
 		pwd
+		hostname
 		ls -la
 		'''
                echo  "Building..............."
