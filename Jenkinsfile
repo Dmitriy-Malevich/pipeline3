@@ -27,7 +27,7 @@ pipeline {
            steps {
                echo  "Start of Stage Build"
  	       sh '''
-		pwdd
+		pwd
 		ls -la
 		'''
                echo  "Building..............."
