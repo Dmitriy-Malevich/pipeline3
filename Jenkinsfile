@@ -22,7 +22,7 @@ pipeline {
           }
 
     stages {
-        stage('1-Build') {
+        stage('1--Build') {
            steps {
                echo  "Start of Stage Build"
  	       sh '''
